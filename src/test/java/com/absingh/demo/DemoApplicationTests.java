@@ -7,11 +7,22 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.text.NumberFormat;
+
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class DemoApplicationTests {
 	@Autowired
 	private ApplicationContext ctx;
+
+	@Autowired
+	private NumberFormat nf;
+
+	@Test
+	public void defaultCurrency() {
+		double amount = 12345678.901234;
+		System.out.println(nf.format(amount));
+	}
 
 	@Test
 	void contextLoads() {
