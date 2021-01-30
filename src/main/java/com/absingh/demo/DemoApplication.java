@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.text.NumberFormat;
+import java.util.Locale;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -15,5 +16,10 @@ public class DemoApplication {
 	@Bean
 	public NumberFormat defaultCurrencyFormat() {
 		return NumberFormat.getCurrencyInstance();
+	}
+
+	@Bean
+	public NumberFormat germanCurrencyFormat() {
+		return NumberFormat.getCurrencyInstance(Locale.GERMANY);
 	}
 }
