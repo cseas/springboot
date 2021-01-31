@@ -15,3 +15,5 @@ public class JokeService {
     restTemplate = builder.build();
   }
 }
+
+// https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-resttemplate
